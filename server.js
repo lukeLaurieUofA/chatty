@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 const ChatMessage = require("./Message.js");
 
 // connects to the database
-mongoose.connect('mongodb://165.232.67.238:27017/chatty');
+mongoose.connect('mongodb://165.232.67.238/chatty');
 
 
 app.use(express.static("public_html"));
