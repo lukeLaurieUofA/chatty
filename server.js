@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 const ChatMessage = require("./Message.js");
 
 // connects to the database
-mongoose.connect('mongodb://165.232.67.238/chatty');
+mongoose.connect('mongodb://localhost/chatty');
 
 
 app.use(express.static("public_html"));
@@ -31,15 +31,14 @@ app.use(express.static("public_html"));
  */
 app.get("/chats", (req, res) => {
   // send back all of the messages in the db
-  res.send("hi");
-  // ChatMessage.find({})
-  //   .then(data => {
-  //     // sorts the data based on time sent in
-  //     const sortedData = data.sort((a, b) => {
-  //       return a.time.getTime() - b.time.getTime();
-  //     });
-  //     res.send(sortedData);
-  //   })
+  ChatMessage.find({})
+    .then(data => {
+      // sorts the data based on time sent in
+      const sortedData = data.sort((a, b) => {
+        return a.time.getTime() - b.time.getTime();
+      });
+      res.send(sortedData);
+    })
 });
 
 /*
