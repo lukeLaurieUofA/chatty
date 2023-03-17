@@ -40,7 +40,7 @@ app.get("/chats", (req, res) => {
       res.send(sortedData);
     })
     .catch(err => {
-      console.log(err);
+      console.log("why");
     })
 });
 
