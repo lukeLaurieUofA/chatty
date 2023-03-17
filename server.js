@@ -31,14 +31,15 @@ app.use(express.static("public_html"));
  */
 app.get("/chats", (req, res) => {
   // send back all of the messages in the db
-  ChatMessage.find({})
-    .then(data => {
-      // sorts the data based on time sent in
-      const sortedData = data.sort((a, b) => {
-        return a.time.getTime() - b.time.getTime();
-      });
-      res.send(sortedData);
-    })
+  res.send("hi");
+  // ChatMessage.find({})
+  //   .then(data => {
+  //     // sorts the data based on time sent in
+  //     const sortedData = data.sort((a, b) => {
+  //       return a.time.getTime() - b.time.getTime();
+  //     });
+  //     res.send(sortedData);
+  //   })
 });
 
 /*
@@ -98,5 +99,5 @@ app.get("*", (req, res) => {
  * being started up.
  */
 app.listen(80, () => {
-  console.log("server listening in port 3000");
+  console.log("server listening in port 80");
 });
