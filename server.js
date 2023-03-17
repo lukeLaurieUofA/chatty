@@ -97,6 +97,6 @@ app.get("*", (req, res) => {
  * This is the code that gets ran whenever the server is
  * being started up.
  */
-app.listen(3000, () => {
+app.listen(80, () => {
   console.log("server listening in port 3000");
 });

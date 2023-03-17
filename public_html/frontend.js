@@ -61,7 +61,7 @@ function createMessage(alias, message) {
  * from the database.
  */
 function getMessages() {
-  const url = "http://localhost:3000/chats";
+  const url = "http://localhost:80/chats";
   fetch(url)
     .then(data => {
       return data.json();
@@ -86,7 +86,7 @@ button.addEventListener("click", () => {
   const curMessage = messageInput.value;
   // clears out the message
   messageInput.value = "";
-  const url = "http://localhost:3000/chats/post";
+  const url = "http://localhost:80/chats/post";
   // sends the request
   fetch(url, {
       method: 'POST',
