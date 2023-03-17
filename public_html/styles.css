@@ -1,0 +1,61 @@
+/*
+This will provide all of the styling for the website
+that gives the user a nicely styled view for the
+index.html page.
+Author: Luke Laurie
+Date: 2/28/2023
+ */
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+h3 {
+  display: inline-block;
+  color: #0F52BA;
+  margin: 0;
+}
+
+/* Top Section */
+#messageSection {
+  background-color: #B6D0E2;
+  height: 70%;
+  overflow-y: scroll;
+  padding: 2% 6%;
+}
+
+.message {
+  margin: 2% 0;
+}
+
+.nameText {
+  font-weight: 900;
+}
+
+.messageText {
+  font-weight: 100;
+}
+
+/* Input Section */
+#inputSection {
+  background-color: #0F52BA;
+  padding: 2% 6%;
+  height: 30%;
+}
+
+.inputField {
+  margin: 3% 0;
+}
+.textLabel {
+  color: #B6D0E2;
+  font-size: 1.5rem;
+}
+
+.inputText {
+  font-size: 1.3rem;
+  width: 30%;
+}
+
+.clear {
+  display: inline-block;
+}

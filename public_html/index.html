@@ -1,0 +1,39 @@
+<!--
+This will create the html portion of the website which
+displays the messages sent along with the bar were the
+user can type in there message to send.
+Author: Luke Laurie
+Date: 2/28/2023
+ -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Chatty</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Div that will contain all of the messages -->
+  <div id="messageSection"></div>
+  <!-- Div where user can send a message -->
+  <div id="inputSection">
+    <div class="inputField">
+      <label for="alias" class="textLabel">Alias</label>
+      <input type="text" name="alias" id="alias" class="inputText">
+    </div>
+    <div class="inputField">
+      <label for="message" class="textLabel">Message</label>
+      <input type="text" name="message" id="message" class="inputText">
+    </div>
+    <input type="submit" value="Send Message" id="submit">
+    <!-- Button to clear the conversation -->
+    <form class="clear" action="/chats/delete" method="post">
+      <input type="submit" value="Clear Conversation">
+    </form>
+  </div>
+  <script src="frontend.js"></script>
+</body>
+
+</html>
