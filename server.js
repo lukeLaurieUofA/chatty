@@ -18,7 +18,16 @@ app.use(bodyParser.json());
 const ChatMessage = require("./Message.js");
 
 // connects to the database
-mongoose.connect('mongodb://localhost:27017/chatty');
+mongoose.connect('mongodb://127.0.0.1/chatty');
+
+mongoose.connection.on('open', () => {
+  console.log('Database connected successfully');
+});
+
+// Listen for the 'error' event to handle connection errors
+mongoose.connection.on('error', (err) => {
+  console.log(`Database connection error: ${err}`);
+});
 
 app.use(express.static("public_html"));
 
