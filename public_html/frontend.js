@@ -14,6 +14,9 @@ messageInput = document.getElementById("message");
 // the array containing all of the messages in the corect order
 messages = [];
 
+// diplays messages on initial page loagup
+getMessages();
+
 
 /*
  * This will clear out all of the elements in the text div, then
